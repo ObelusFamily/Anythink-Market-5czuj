@@ -10,4 +10,8 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 ## First setup
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+- [Install Docker](https://docs.docker.com/get-docker/)
+- Verify Docker is working with `docker -v` and `docker-compose -v`. Both are required to proceed.
+- From the project root run `docker-compose up`. This will start run the application with 3 containers - backend, frontend, and mongo database
+- To confirm the backend is running, go to http://localhost:3000/api/ping. You should get a 200 response a message that everything is working.
+- To confirm teh backend can talk to the frontend and database, go to http://localhost:3001/register and register yourself as a new user.
